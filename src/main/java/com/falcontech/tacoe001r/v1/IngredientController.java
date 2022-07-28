@@ -26,14 +26,4 @@ public class IngredientController {
   public Optional<Ingredient> getIngredientById(@PathVariable String id) {
     return ingredientService.getIngredientById(id);
   }
-
-  @PostMapping("/add")
-  public Ingredient addIngredient(@RequestBody Ingredient ingredient) {
-    return ingredientService.saveIngredient(ingredient);
-  }
-
-  @PutMapping("{id}")
-  public Ingredient updateIngredient(@PathVariable String id, @RequestBody Ingredient ingredient) {
-    return ingredientService.saveIngredient(ingredient);
-  }
 }

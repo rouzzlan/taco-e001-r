@@ -19,18 +19,10 @@ public class TacoService {
   public Iterable<Taco> getTacos() {
     return tacoRepository.findAll();
   }
-@Transactional(readOnly = true)
+
+  @Transactional(readOnly = true)
   public Optional<Taco> getTacoById(Long id) {
     return tacoRepository.findById(id);
   }
 
-  @Transactional
-  public Taco saveTaco(Taco taco) {
-    return tacoRepository.save(taco);
-  }
-
-  @Transactional
-  public void deleteTacoByID(Long id) {
-    tacoRepository.deleteById(id);
-  }
 }

@@ -21,18 +21,8 @@ public class TacoOrderController {
     return tacoOrderService.getOrders();
   }
 
-  @PostMapping("/add")
-  public TacoOrder addTacoOrder(@RequestBody TacoOrder tacoOrder) {
-    return tacoOrderService.saveTacoOrder(tacoOrder);
-  }
-
   @GetMapping("/{id}")
   public Optional<TacoOrder> getTacoOrderById(@PathVariable Long id) {
     return tacoOrderService.findOrderById(id);
-  }
-
-  @DeleteMapping("/{id}")
-  public void deleteOrderById(@PathVariable Long id) {
-    tacoOrderService.deleteTacoById(id);
   }
 }

@@ -1,41 +1,6 @@
-###
 GET http://localhost:8080/v1/order/all
 
 ###
 GET http://localhost:8080/v1/order/1
 
 ###
-POST http://localhost:8080/v1/order/add
-Content-Type: application/json
-
-{
-  "deliveryName": "new Order",
-  "email": "test@test.be",
-  "deliveryStreet": "Street 123",
-  "deliveryCity": "City",
-  "deliveryState": "State",
-  "deliveryZip": "8080",
-  "ccExpiration": "10/10",
-  "ccNumber": "5364965554644446",
-  "ccCVV": "123",
-  "tacos": [
-    {
-      "name": "New taco",
-      "ingredients": [
-        {
-          "id": "SLSA",
-          "name": "Salsa",
-          "type": "SAUCE"
-        },
-        {
-          "id": "SRCR",
-          "name": "Sour Cream",
-          "type": "SAUCE"
-        }
-      ]
-    }
-  ]
-}
-
-###
-DELETE http://localhost:8080/v1/order/1

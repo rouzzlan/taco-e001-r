@@ -1,54 +1,6 @@
-###
 GET http://localhost:8080/v1/tacos/all
 
 ###
 GET http://localhost:8080/v1/tacos/1
 
 ###
-
-POST http://localhost:8080/v1/tacos/add
-Content-Type: application/json
-
-{
-  "name": "TestTaco",
-  "tacoOrderId": "902",
-  "ingredients": [
-    {
-      "id": "SLSA",
-      "name": "Salsa",
-      "type": "SAUCE"
-    },
-    {
-      "id": "SRCR",
-      "name": "Sour Cream",
-      "type": "SAUCE"
-    }
-  ]
-}
-
-###
-
-PUT http://localhost:8080/v1/tacos/update
-Content-Type: application/json
-
-{
-  "id": "801",
-  "tacoOrderId": "901",
-  "createdAt": "2022-06-28T13:14:09.000+00:00",
-  "name": "TestTaco",
-  "ingredients": [
-    {
-      "id": "SLSA",
-      "name": "Salsa",
-      "type": "SAUCE"
-    },
-    {
-      "id": "SRCR",
-      "name": "Sour Cream",
-      "type": "SAUCE"
-    }
-  ]
-}
-
-###
-DELETE http://localhost:8080/v1/tacos/801

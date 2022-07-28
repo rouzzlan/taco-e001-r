@@ -25,19 +25,4 @@ public class TacoController {
   public Optional<Taco> findById(@PathVariable Long id) {
     return tacoService.getTacoById(id);
   }
-
-  @PostMapping("/add")
-  public Taco addTaco(@RequestBody Taco taco) {
-    return tacoService.saveTaco(taco);
-  }
-
-  @PutMapping("/update")
-  public Taco updateTaco(@RequestBody Taco taco) {
-    return tacoService.saveTaco(taco);
-  }
-
-  @DeleteMapping("/{id}")
-  public void deleteTacoById(@PathVariable Long id) {
-    tacoService.deleteTacoByID(id);
-  }
 }

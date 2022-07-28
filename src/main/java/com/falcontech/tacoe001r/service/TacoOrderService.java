@@ -10,11 +10,9 @@ import java.util.Optional;
 
 @Service
 public class TacoOrderService {
-  private final TacoRepository tacoRepository;
   private final TacoOrderRepository tacoOrderRepository;
 
-  public TacoOrderService(TacoRepository tacoRepository, TacoOrderRepository tacoOrderRepository) {
-    this.tacoRepository = tacoRepository;
+  public TacoOrderService(TacoOrderRepository tacoOrderRepository) {
     this.tacoOrderRepository = tacoOrderRepository;
   }
 
@@ -23,20 +21,8 @@ public class TacoOrderService {
     return tacoOrderRepository.findAll();
   }
 
-  @Transactional
-  public TacoOrder saveTacoOrder(TacoOrder tacoOrder) {
-//    Iterable<Taco> savedTacos = tacoRepository.saveAll(tacoOrder.getTacos());
-
-    return tacoOrderRepository.save(tacoOrder);
-  }
-
   @Transactional(readOnly = true)
   public Optional<TacoOrder> findOrderById(Long id) {
     return tacoOrderRepository.findById(id);
-  }
-
-  @Transactional
-  public void deleteTacoById(Long id) {
-    tacoRepository.deleteById(id);
   }
 }

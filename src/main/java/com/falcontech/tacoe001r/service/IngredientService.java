@@ -25,8 +25,4 @@ public class IngredientService {
   public Optional<Ingredient> getIngredientById(String id) {
     return ingredientRepository.findById(id);
   }
-  @Transactional
-  public Ingredient saveIngredient(Ingredient ingredient) {
-    return ingredientRepository.save(ingredient);
-  }
 }
