@@ -46,6 +46,8 @@ alter table Taco_to_Ingredient
 alter table Taco_to_Ingredient
     add foreign key (taco_id) references Taco (id);
 
+
+SET FOREIGN_KEY_CHECKS = 0;
 insert into Ingredient (id, name, type)
 values ('FLTO', 'Flour Tortilla', 'WRAP');
 insert into Ingredient (id, name, type)
@@ -67,7 +69,6 @@ values ('SLSA', 'Salsa', 'SAUCE');
 insert into Ingredient (id, name, type)
 values ('SRCR', 'Sour Cream', 'SAUCE');
 
-SET FOREIGN_KEY_CHECKS = 0;
 insert into Taco_Order (id, delivery_Name, delivery_Street, delivery_City, delivery_State, delivery_Zip, cc_number,
                         cc_expiration, cc_cvv, email)
 VALUES (1, 'My first order', 'Kloosterstraat 27 a', 'Emblem', 'Antwerpen', '2520', '4111111111111112', '10/12', '999',
