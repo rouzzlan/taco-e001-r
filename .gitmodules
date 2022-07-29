@@ -1,0 +1,3 @@
+[submodule "sql-scripts"]
+	path = sql-scripts
+	url = git@gitlab-home.localdomain:taco-project/taco-mysql-scripts.git
