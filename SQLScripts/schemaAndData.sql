@@ -104,3 +104,13 @@ values (3, 'CARN');
 insert into Taco_to_Ingredient (taco_id, ingredient_id)
 values (3, 'FLTO');
 SET FOREIGN_KEY_CHECKS = 1;
+
+create procedure deleteTacoOrder(in toid bigint)
+begin
+    delete ti
+    from Taco_to_Ingredient ti
+             inner join Taco T on ti.taco_id = T.id
+    where taco_order_id = toid;
+    delete from Taco where taco_order_id = toid;
+    delete from Taco_Order where id = toid;
+end;
