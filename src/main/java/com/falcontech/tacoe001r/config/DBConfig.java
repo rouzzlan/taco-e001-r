@@ -27,8 +27,8 @@ public class DBConfig {
   public DataSource mysqlDataSourceDev() {
     DriverManagerDataSource dataSource = new DriverManagerDataSource();
     dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-    dataSource.setUrl("jdbc:mysql://192.168.2.21:3306/taco_dev");
-    dataSource.setUsername("test_user");
+    dataSource.setUrl("jdbc:mysql://192.168.110.129:3306/DB1");
+    dataSource.setUsername("replica_db1");
     dataSource.setPassword("rte.uY694a8bNrW-MQ_mBz");
     return dataSource;
   }
