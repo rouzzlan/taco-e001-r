@@ -55,4 +55,16 @@ public class DBConfig {
     dataSource.setPassword(env.getProperty("TACO_APP_DB_PSWD"));
     return dataSource;
   }
+
+  @Bean
+  @Profile("prod_docker")
+  public DataSource mysqlDataSourceProdDocker() {
+    log.info("Loading [PRODUCTION DOCKER] profiles from System Environment variables");
+    DriverManagerDataSource dataSource = new DriverManagerDataSource();
+    dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+    dataSource.setUrl(env.getProperty("TACO_APP_DATASOURCE_URL"));
+    dataSource.setUsername(env.getProperty("TACO_APP_DB_USR"));
+    dataSource.setPassword(env.getProperty("TACO_APP_DB_PSWD"));
+    return dataSource;
+  }
 }

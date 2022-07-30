@@ -1,0 +1,15 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="TacoE001RApplication Docker Prod" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <option name="ACTIVE_PROFILES" value="prod_docker" />
+    <envs>
+      <env name="TACO_APP_DB_USR" value="meadmin" />
+      <env name="TACO_APP_DB_PSWD" value="badpass" />
+      <env name="TACO_APP_DATASOURCE_URL" value="jdbc:mysql://localhost:3310/DB1" />
+    </envs>
+    <module name="taco-e001-R" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="com.falcontech.tacoe001r.TacoE001RApplication" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
