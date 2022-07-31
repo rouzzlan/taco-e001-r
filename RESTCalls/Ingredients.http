@@ -1,7 +1,7 @@
 GET http://localhost:8081/v1/ingredients/all
 
 ###
-GET http://localhost:8081/v1/ingredients/FLTO
+GET http://localhost:8081/v1/ingredients/_TST
 
 ###
 
