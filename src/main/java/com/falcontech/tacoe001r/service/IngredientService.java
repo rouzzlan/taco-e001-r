@@ -19,7 +19,7 @@ public class IngredientService {
 
   @Transactional(readOnly = true)
   public Iterable<Ingredient> getIngredients() {
-    return ingredientRepository.findAll();
+    return ingredientRepository.getEnabledIngredients();
   }
 
   @Transactional(readOnly = true)

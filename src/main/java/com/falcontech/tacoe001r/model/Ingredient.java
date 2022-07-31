@@ -2,6 +2,7 @@ package com.falcontech.tacoe001r.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
+import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 
@@ -18,6 +19,9 @@ public class Ingredient {
   private String name;
   @Enumerated(EnumType.STRING)
   private Type type;
+
+  @Column(name = "enabled")
+  private Boolean isEnabled;
 
   public enum Type {
     @JsonProperty("WRAP")
