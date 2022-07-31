@@ -26,4 +26,9 @@ public class IngredientController {
   public Optional<Ingredient> getIngredientById(@PathVariable String id) {
     return ingredientService.getIngredientById(id);
   }
+
+  @GetMapping("/get/ingredient/types")
+  public Ingredient.Type[] getTypes() {
+    return ingredientService.getTypes();
+  }
 }

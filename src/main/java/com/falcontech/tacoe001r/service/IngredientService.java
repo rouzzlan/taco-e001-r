@@ -5,6 +5,7 @@ import com.falcontech.tacoe001r.repo.IngredientRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Collection;
 import java.util.Optional;
 
 
@@ -24,5 +25,9 @@ public class IngredientService {
   @Transactional(readOnly = true)
   public Optional<Ingredient> getIngredientById(String id) {
     return ingredientRepository.findById(id);
+  }
+
+  public Ingredient.Type[] getTypes() {
+    return Ingredient.Type.values();
   }
 }
