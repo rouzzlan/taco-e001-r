@@ -22,6 +22,12 @@ public class IngredientController {
     return ingredientService.getIngredients();
   }
 
+
+  @GetMapping("/all/enabled")
+  public Iterable<Ingredient> getEnabledIngredients() {
+    return ingredientService.getEnabledIngredients();
+  }
+
   @GetMapping("/{id}")
   public Optional<Ingredient> getIngredientById(@PathVariable String id) {
     return ingredientService.getIngredientById(id);

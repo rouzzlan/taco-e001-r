@@ -1,10 +1,14 @@
 GET http://localhost:8081/v1/ingredients/all
 
 ###
+
+GET http://localhost:8081/v1/ingredients/all/enabled
+
+###
+
+
 GET http://localhost:8081/v1/ingredients/_TST
 
 ###
 
 GET http://localhost:8081/v1/ingredients/get/ingredient/types
-
-###
