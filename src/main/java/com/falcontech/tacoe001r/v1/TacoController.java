@@ -4,6 +4,7 @@ import com.falcontech.tacoe001r.model.Taco;
 import com.falcontech.tacoe001r.service.TacoService;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collection;
 import java.util.Optional;
 
 @CrossOrigin
@@ -24,5 +25,10 @@ public class TacoController {
   @GetMapping("/{id}")
   public Optional<Taco> findById(@PathVariable Long id) {
     return tacoService.getTacoById(id);
+  }
+
+  @GetMapping("/order/{id}")
+  public Collection<Taco> getTacosForOrder(@PathVariable Long id) {
+    return tacoService.getTacosForOrder(id);
   }
 }

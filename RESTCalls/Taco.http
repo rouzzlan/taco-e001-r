@@ -4,3 +4,7 @@ GET http://localhost:8081/v1/tacos/all
 GET http://localhost:8081/v1/tacos/1
 
 ###
+
+GET http://localhost:8081/v1/tacos/order/1
+
+###
