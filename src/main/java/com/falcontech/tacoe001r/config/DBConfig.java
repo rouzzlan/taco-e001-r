@@ -34,6 +34,17 @@ public class DBConfig {
   }
 
   @Bean
+  @Profile({"dev-basic"})
+  public DataSource mysqlDataSourceDevBasic() {
+    DriverManagerDataSource dataSource = new DriverManagerDataSource();
+    dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+    dataSource.setUrl("jdbc:mysql://mysql-dev.localdomain:3306/DB1");
+    dataSource.setUsername("viewer");
+    dataSource.setPassword("rte.uY694a8bNrW-MQ_mBz");
+    return dataSource;
+  }
+
+  @Bean
   @Profile("dev_docker")
   public DataSource mysqlDataSourceDevDocker() {
     DriverManagerDataSource dataSource = new DriverManagerDataSource();
