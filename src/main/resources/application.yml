@@ -1,0 +1,14 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: validate
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+keycloak:
+  auth-server-url: https://keycloak-dev-1.localdomain:8443
+  realm: myrealm
+  resource: myclient
+  public-client: true
+server:
+  port: 8081

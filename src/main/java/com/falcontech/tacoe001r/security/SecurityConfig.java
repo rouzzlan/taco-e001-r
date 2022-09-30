@@ -1,4 +1,4 @@
-package com.falcontech.authtodo.security;
+package com.falcontech.tacoe001r.security;
 
 import org.keycloak.adapters.springsecurity.KeycloakConfiguration;
 import org.keycloak.adapters.springsecurity.authentication.KeycloakAuthenticationProvider;
@@ -33,7 +33,7 @@ class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
   protected void configure(HttpSecurity http) throws Exception {
     super.configure(http);
     http.cors().and().authorizeRequests()
-        .antMatchers("/todo**").authenticated()
+        .antMatchers("/v1**").authenticated()
         .and().csrf().disable();
   }
 }
