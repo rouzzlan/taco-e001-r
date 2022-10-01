@@ -10,6 +10,7 @@ import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.UUID;
 
 @Getter
 @Setter
@@ -45,6 +46,6 @@ public class TacoOrder {
   @JoinColumn(name = "taco_order_id")
   @ToString.Exclude
   private Set<Taco> tacos = new HashSet<>();
-  @ManyToOne
-  private Orderer orderer;
+  @Column(name = "orderer_id")
+  private UUID orderer_id;
 }
